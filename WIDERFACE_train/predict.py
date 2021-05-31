@@ -18,7 +18,7 @@ param_file_path = './WIDERFACE_train/epoch_1000.pth'
 load_checkpoint(config_dict['model'], load_path=param_file_path, strict=True)
 
 # set the image path to be tested
-image_path = './WIDERFACE_train/test_images/image2.jpg'
+image_path = './WIDERFACE_train/test_images/image3.jpg'
 image = cv2.imread(image_path, cv2.IMREAD_UNCHANGED)
 
 results = config_dict['model'].predict_for_single_image(image, aug_pipeline=simple_widerface_val_pipeline, classification_threshold=0.5, nms_threshold=0.3) 
